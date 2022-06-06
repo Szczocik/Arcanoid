@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://assets/ball.png" type="Texture" id=1]
+[ext_resource path="res://Assets/ball.png" type="Texture" id=1]
 [ext_resource path="res://Ball/Ball.gd" type="Script" id=2]
 [ext_resource path="res://sounds_ping_pong_8bit/ping_pong_8bit_beeep.ogg" type="AudioStream" id=3]
 
