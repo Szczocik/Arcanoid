@@ -13,11 +13,13 @@ func _physics_process(delta):
 	if collision_object:
 		velocity = velocity.bounce(collision_object.normal)
 		$CollisionSound.play()
+		if collision_object.collider.is_in_group("bricks"):
+			collision_object.collider.queue_free()
+
 
 
 func stop_ball():
 	speed = 0
-	
 
 func speed_ball():
 	speed = 600
