@@ -15,7 +15,7 @@ font_data = ExtResource( 2 )
 [sub_resource type="DynamicFont" id=2]
 size = 34
 outline_size = 3
-outline_color = Color( 0.0588235, 0.909804, 0.0980392, 1 )
+outline_color = Color( 0.27451, 0.0431373, 0.945098, 1 )
 font_data = ExtResource( 2 )
 
 [node name="Game_over" type="Control"]
