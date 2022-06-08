@@ -1,6 +1,8 @@
 extends Node
 
 var Ball = 3
+var PlayerScore = 0
+
 
 
 func _ready():
