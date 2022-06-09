@@ -11,7 +11,7 @@ func _ready():
 
 
 func _on_Bottom_body_entered(body):
-	$Ball.position = Vector2(960, 540)
+	$Ball.position = Vector2(860, 540)
 	Ball -= 1
 	update_GUI()
 	if Ball < 0:
@@ -21,6 +21,10 @@ func _on_Bottom_body_entered(body):
 func brick_up():
 	PlayerScore += 1
 	update_GUI()
+
+	
+func change_scene():
+	get_tree().change_scene("res://Levels/Level_" + str(int(get_tree().current_scene.name) + 1) + ".tscn")
 
 
 func update_GUI():
