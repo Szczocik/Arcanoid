@@ -5,7 +5,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 192.648, 63.8243 )
 
-[node name="BrickWallGrey2" type="StaticBody2D"]
+[node name="Brick2WallGrey" type="StaticBody2D"]
 __meta__ = {
 "_edit_group_": true
 }
