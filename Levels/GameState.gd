@@ -16,12 +16,15 @@ func _on_Bottom_body_entered(body):
 	update_GUI()
 	if Ball < 0:
 		game_over()
+		
 
 
 func brick_up():
 	PlayerScore += 1
 	update_GUI()
-
+	if PlayerScore == 5:
+		change_scene()
+	
 	
 func change_scene():
 	get_tree().change_scene("res://Levels/Level_" + str(int(get_tree().current_scene.name) + 1) + ".tscn")
@@ -29,7 +32,9 @@ func change_scene():
 
 func update_GUI():
 	get_tree().call_group("GUI", "update_GUI", PlayerScore, Ball)
-
+	
+	
+	
 		
 func game_over():
 	get_tree().change_scene("res://Levels/Game_over.tscn")
