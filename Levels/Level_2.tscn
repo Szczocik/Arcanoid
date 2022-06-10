@@ -23,17 +23,17 @@ extents = Vector2( 6.44901, 564.391 )
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 973.444, 10 )
 
-[node name="Level_1" type="Node"]
+[node name="Level_2" type="Node"]
 script = ExtResource( 7 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchor_top = -0.00207864
 anchor_right = 1.0
 anchor_bottom = 0.997921
-margin_left = 1.68188
-margin_top = 0.56311
-margin_right = 1.68164
-margin_bottom = 0.563232
+margin_left = -1.56079
+margin_top = -2.18625
+margin_right = -1.56104
+margin_bottom = -2.18604
 color = Color( 0.231373, 0.227451, 0.392157, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -76,10 +76,10 @@ collision_mask = 2
 [node name="Green" type="Node2D" parent="Bricks"]
 
 [node name="BrickGreen" parent="Bricks/Green" instance=ExtResource( 4 )]
-position = Vector2( 500.018, 448.326 )
+position = Vector2( 810.54, 192.367 )
 
 [node name="BrickGreen2" parent="Bricks/Green" instance=ExtResource( 4 )]
-position = Vector2( 654.428, 448.326 )
+position = Vector2( 964.45, 192.697 )
 
 [node name="BrickGreen3" parent="Bricks/Green" instance=ExtResource( 4 )]
 position = Vector2( 808.378, 448.626 )
@@ -91,15 +91,25 @@ position = Vector2( 962.573, 448.819 )
 position = Vector2( 1116.97, 448.723 )
 
 [node name="BrickGreen6" parent="Bricks/Green" instance=ExtResource( 4 )]
-position = Vector2( 1270.88, 449.12 )
+position = Vector2( 1118.54, 192.321 )
 
 [node name="BrickGreen7" parent="Bricks/Green" instance=ExtResource( 4 )]
-position = Vector2( 1424.97, 449.12 )
+position = Vector2( 1891.93, 397.986 )
+rotation = 1.5708
+
+[node name="BrickGreen8" parent="Bricks/Green" instance=ExtResource( 4 )]
+position = Vector2( 26.3877, 396.532 )
+rotation = 1.5708
 
 [node name="Red" type="Node2D" parent="Bricks"]
 
 [node name="BrickRed" parent="Bricks/Red" instance=ExtResource( 6 )]
-position = Vector2( 578.264, 397.002 )
+position = Vector2( 77.7835, 397.235 )
+rotation = 1.5708
+
+[node name="BrickRed7" parent="Bricks/Red" instance=ExtResource( 6 )]
+position = Vector2( 1841.26, 397.599 )
+rotation = 1.5708
 
 [node name="BrickRed2" parent="Bricks/Red" instance=ExtResource( 6 )]
 position = Vector2( 732.604, 397.632 )
@@ -113,16 +123,21 @@ position = Vector2( 1041.29, 397.632 )
 [node name="BrickRed5" parent="Bricks/Red" instance=ExtResource( 6 )]
 position = Vector2( 1194.79, 397.632 )
 
-[node name="BrickRed6" parent="Bricks/Red" instance=ExtResource( 6 )]
-position = Vector2( 1348.3, 397.632 )
-
 [node name="Orange" type="Node2D" parent="Bricks"]
 
 [node name="BrickOrange" parent="Bricks/Orange" instance=ExtResource( 9 )]
-position = Vector2( 656.427, 346.23 )
+position = Vector2( 129.31, 399.115 )
+rotation = 1.5708
+
+[node name="BrickOrange6" parent="Bricks/Orange" instance=ExtResource( 9 )]
+position = Vector2( 1789.33, 397.387 )
+rotation = 1.5708
 
 [node name="BrickOrange2" parent="Bricks/Orange" instance=ExtResource( 9 )]
 position = Vector2( 810.137, 346.23 )
+
+[node name="BrickOrange7" parent="Bricks/Orange" instance=ExtResource( 9 )]
+position = Vector2( 656.729, 346.23 )
 
 [node name="BrickOrange3" parent="Bricks/Orange" instance=ExtResource( 9 )]
 position = Vector2( 964.477, 345.6 )
@@ -136,21 +151,24 @@ position = Vector2( 1272.28, 345.6 )
 [node name="Blue" type="Node2D" parent="Bricks"]
 
 [node name="BrickBlue" parent="Bricks/Blue" instance=ExtResource( 10 )]
-position = Vector2( 733.072, 295.076 )
+position = Vector2( 1689.58, 295.693 )
 
 [node name="BrickBlue2" parent="Bricks/Blue" instance=ExtResource( 10 )]
-position = Vector2( 886.649, 295.076 )
+position = Vector2( 76.8272, 295.296 )
 
 [node name="BrickBlue3" parent="Bricks/Blue" instance=ExtResource( 10 )]
-position = Vector2( 1040.23, 295.451 )
+position = Vector2( 230.393, 295.085 )
 
 [node name="BrickBlue4" parent="Bricks/Blue" instance=ExtResource( 10 )]
-position = Vector2( 1193.43, 295.451 )
+position = Vector2( 1841.43, 295.168 )
 
 [node name="Yellow" type="Node2D" parent="Bricks"]
 
 [node name="BrickYellow" parent="Bricks/Yellow" instance=ExtResource( 11 )]
 position = Vector2( 809.827, 244.106 )
+
+[node name="BrickYellow4" parent="Bricks/Yellow" instance=ExtResource( 11 )]
+position = Vector2( 656.419, 244.236 )
 
 [node name="BrickYellow2" parent="Bricks/Yellow" instance=ExtResource( 11 )]
 position = Vector2( 963.952, 244.106 )
@@ -158,58 +176,84 @@ position = Vector2( 963.952, 244.106 )
 [node name="BrickYellow3" parent="Bricks/Yellow" instance=ExtResource( 11 )]
 position = Vector2( 1117.91, 243.938 )
 
+[node name="BrickYellow5" parent="Bricks/Yellow" instance=ExtResource( 11 )]
+position = Vector2( 1271.91, 243.938 )
+
 [node name="Violet" type="Node2D" parent="Bricks"]
 
 [node name="BrickViolet" parent="Bricks/Violet" instance=ExtResource( 12 )]
-position = Vector2( 888.877, 192.416 )
+position = Vector2( 153.504, 244.314 )
+
+[node name="BrickViolet3" parent="Bricks/Violet" instance=ExtResource( 12 )]
+position = Vector2( 892.169, 140.931 )
+
+[node name="BrickViolet4" parent="Bricks/Violet" instance=ExtResource( 12 )]
+position = Vector2( 1046.5, 140.931 )
 
 [node name="BrickViolet2" parent="Bricks/Violet" instance=ExtResource( 12 )]
-position = Vector2( 1042.26, 192.416 )
+position = Vector2( 1762.69, 241.151 )
 
 [node name="GUI" parent="." instance=ExtResource( 8 )]
 
 [node name="BricksWall" type="Node2D" parent="."]
 
 [node name="BrickWallGray" parent="BricksWall" instance=ExtResource( 5 )]
-position = Vector2( 960, 500 )
+position = Vector2( 286.064, 397.229 )
+rotation = 1.5708
+collision_layer = 8
+collision_mask = 2
+
+[node name="BrickWallGray3" parent="BricksWall" instance=ExtResource( 5 )]
+position = Vector2( 1639.67, 397.229 )
+rotation = 1.5708
 collision_layer = 8
 collision_mask = 2
 
 [node name="BrickWallGray5" parent="BricksWall" instance=ExtResource( 5 )]
-position = Vector2( 654.428, 500 )
+position = Vector2( 1691, 500 )
 collision_layer = 8
 collision_mask = 2
 
 [node name="BrickWallGray6" parent="BricksWall" instance=ExtResource( 5 )]
-position = Vector2( 500.018, 500 )
+position = Vector2( 234.922, 500 )
 collision_layer = 8
 collision_mask = 2
 
 [node name="BrickWallGray2" parent="BricksWall" instance=ExtResource( 5 )]
-position = Vector2( 1114.66, 500 )
+position = Vector2( 880.232, 500 )
+collision_layer = 8
+collision_mask = 2
+
+[node name="BrickWallGray7" parent="BricksWall" instance=ExtResource( 5 )]
+position = Vector2( 881.232, 294.59 )
+collision_layer = 8
+collision_mask = 2
+
+[node name="BrickWallGray8" parent="BricksWall" instance=ExtResource( 5 )]
+position = Vector2( 1035.36, 294.59 )
 collision_layer = 8
 collision_mask = 2
 
 [node name="BrickWallGray4" parent="BricksWall" instance=ExtResource( 5 )]
-position = Vector2( 1269.44, 500 )
+position = Vector2( 1035.36, 500 )
 collision_layer = 8
 collision_mask = 2
 
 [node name="Brick2WallGrey" parent="BricksWall" instance=ExtResource( 3 )]
-position = Vector2( 1424.03, 500 )
+position = Vector2( 79.502, 500 )
 collision_layer = 8
 collision_mask = 2
 
 [node name="Brick2WallGrey2" parent="BricksWall" instance=ExtResource( 3 )]
-position = Vector2( 806.266, 500 )
+position = Vector2( 1841.25, 500 )
 collision_layer = 8
 collision_mask = 2
 
 [node name="Heart" parent="." instance=ExtResource( 13 )]
-position = Vector2( 890.819, 142.932 )
+position = Vector2( 210.698, 448.213 )
 
 [node name="Heart2" parent="." instance=ExtResource( 13 )]
-position = Vector2( 1031.98, 143.141 )
+position = Vector2( 1715.02, 448.752 )
 scale = Vector2( 1.14166, 1 )
 
 [connection signal="body_entered" from="Bottom" to="." method="_on_Bottom_body_entered"]

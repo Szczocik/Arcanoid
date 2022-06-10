@@ -59,7 +59,6 @@ tracks/0/keys = {
 
 [node name="Heart" type="Node2D"]
 position = Vector2( -0.210236, 0 )
-scale = Vector2( 1.12601, 1 )
 
 [node name="Heart" type="StaticBody2D" parent="." groups=[
 "heart",
