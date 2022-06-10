@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Ball/Ball.tscn" type="PackedScene" id=2]
@@ -8,6 +8,8 @@
 [ext_resource path="res://Bricks/BrickRed.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Levels/GameState.gd" type="Script" id=7]
 [ext_resource path="res://GUI/GUI.tscn" type="PackedScene" id=8]
+[ext_resource path="res://SFX/BGM.gd" type="Script" id=9]
+[ext_resource path="res://SFX/Chiptune_Adventures_1.ogg" type="AudioStream" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 976.656, 10 )
@@ -208,5 +210,10 @@ position = Vector2( 1820.99, 294.505 )
 position = Vector2( 1820.99, 135.505 )
 
 [node name="GUI" parent="." instance=ExtResource( 8 )]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+volume_db = -6.0
+script = ExtResource( 9 )
 
 [connection signal="body_entered" from="Bottom" to="." method="_on_Bottom_body_entered"]
