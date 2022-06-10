@@ -1,7 +1,6 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Assets/60-Breakout-Tiles.png" type="Texture" id=1]
-[ext_resource path="res://NPCs/Heart.gd" type="Script" id=2]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -55,25 +54,26 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 1, 2 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1, 1 ), Vector2( 1.2, 1 ), Vector2( 1, 1 ) ]
+"values": [ Vector2( 1, 1 ), Vector2( 1.4, 1 ), Vector2( 1, 1 ) ]
 }
 
 [node name="Heart" type="Node2D"]
 position = Vector2( -0.210236, 0 )
-scale = Vector2( 1.1863, 1 )
-script = ExtResource( 2 )
+scale = Vector2( 1.12601, 1 )
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Heart" type="StaticBody2D" parent="." groups=[
+"heart",
+]]
 collision_layer = 16
 collision_mask = 2
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Heart"]
 polygon = PoolVector2Array( -23.945, -14.8288, -22.6823, -17.2842, -20.6478, -19.6694, -17.8417, -21.7039, -15.246, -22.8264, -11.5278, -23.2473, -8.51118, -22.7562, -5.49457, -21.3531, -2.96903, -19.6694, -1.35549, -18.1962, 0.258049, -16.2319, 1.73128, -18.547, 3.69559, -20.3008, 5.87036, -21.9144, 8.95713, -22.8965, 12.2544, -23.2473, 15.4814, -22.7562, 18.1473, -21.4233, 20.6728, -19.6694, 22.8476, -17.2842, 24.1104, -15.0393, 25.0925, -12.3734, 25.5836, -9.42696, 25.7239, -5.70881, 25.303, -2.97281, 24.1104, 0.254272, 22.9178, 2.77981, 20.2519, 6.77858, 14.7098, 13.0924, 7.41375, 18.7047, 0.187897, 23.1244, -5.28411, 19.9675, -10.7561, 16.2494, -16.8595, 10.7774, -20.5777, 6.07705, -23.7346, 0.955812, -25.6287, -4.6565, -25.6287, -7.53281, -25.0675, -11.6017 )
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="Area2D"]
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Heart"]
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 1 )
 animation = "stand"
@@ -83,5 +83,3 @@ playing = true
 autoplay = "puls"
 anims/die = SubResource( 3 )
 anims/puls = SubResource( 2 )
-
-[connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]

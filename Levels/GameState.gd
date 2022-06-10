@@ -20,6 +20,7 @@ func _on_Bottom_body_entered(body):
 
 func ball_up():
 	Ball += 1
+	update_GUI()
 	
 
 func brick_up():

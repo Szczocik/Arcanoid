@@ -16,6 +16,9 @@ func _physics_process(delta):
 		if collision_object.collider.is_in_group("bricks"):
 			collision_object.collider.queue_free()
 			get_tree().call_group("Gamestate", "brick_up")
+		if collision_object.collider.is_in_group("heart"):
+			collision_object.collider.queue_free()
+			get_tree().call_group("Gamestate", "ball_up")
 	
 			
 
