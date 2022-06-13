@@ -1,5 +1,7 @@
 extends Node
 
+const CLOUD = preload("res://NPCs/Cloud.tscn")
+
 var Ball = 3
 var PlayerScore = 0
 
@@ -28,6 +30,18 @@ func brick_up():
 	update_GUI()
 	if PlayerScore == 25:
 		change_scene()
+	
+	
+func cloud_spawn(start_pos):
+	var cloud = CLOUD.instance()
+	var cloud_start_node_name = "StartPositions/CloudStart" + str(start_pos)
+	cloud.position = get_node(cloud_start_node_name).position
+	add_child(cloud)
+	
+	var timer_node_name = "CloudTimer/Timer" + str(start_pos)
+	get_node(timer_node_name).wait_time = rand_range(10,10)
+	update_GUI()
+	
 	
 	
 func change_scene():
