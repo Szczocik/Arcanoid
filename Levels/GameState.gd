@@ -56,3 +56,6 @@ func game_over():
 	get_tree().change_scene("res://Levels/Game_over.tscn")
 	
 	
+
+
+func _on_Timer1_timeout(): cloud_spawn(1)

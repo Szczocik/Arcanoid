@@ -229,4 +229,14 @@ scale = Vector2( 1.14166, 1 )
 stream = ExtResource( 15 )
 script = ExtResource( 16 )
 
+[node name="StartPositions" type="Node" parent="."]
+
+[node name="CloudStart1" type="Position2D" parent="StartPositions"]
+position = Vector2( 351.121, -73.6222 )
+
+[node name="CloudTimer" type="Node" parent="."]
+
+[node name="Timer1" type="Timer" parent="CloudTimer"]
+
 [connection signal="body_entered" from="Bottom" to="." method="_on_Bottom_body_entered"]
+[connection signal="timeout" from="CloudTimer/Timer1" to="." method="_on_Timer1_timeout"]
