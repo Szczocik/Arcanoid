@@ -9,6 +9,8 @@ extents = Vector2( 191.39, 63.4593 )
 "bricks",
 ]]
 position = Vector2( 126, 74 )
+collision_layer = 4
+collision_mask = 2
 __meta__ = {
 "_edit_group_": true
 }

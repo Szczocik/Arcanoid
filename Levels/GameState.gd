@@ -24,6 +24,10 @@ func ball_up():
 	Ball += 1
 	update_GUI()
 	
+func ball_down():
+	Ball -= 1
+	update_GUI()
+	
 
 func brick_up():
 	PlayerScore += 1
@@ -59,3 +63,4 @@ func game_over():
 
 
 func _on_Timer1_timeout(): cloud_spawn(1)
+func _on_Timer2_timeout(): cloud_spawn(2)

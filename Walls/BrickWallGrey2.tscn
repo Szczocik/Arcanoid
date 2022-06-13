@@ -6,6 +6,8 @@
 extents = Vector2( 192.648, 63.8243 )
 
 [node name="Brick2WallGrey" type="StaticBody2D"]
+collision_layer = 8
+collision_mask = 2
 __meta__ = {
 "_edit_group_": true
 }

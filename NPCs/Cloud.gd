@@ -13,6 +13,6 @@ func _process(delta):
 
 func _on_Cloud_body_entered(body):
 	$AudioStreamPlayer2D.play()
-	get_tree().call_group("Gamestate", "coin_down")
+	get_tree().call_group("Gamestate", "ball_down")
 	
 	

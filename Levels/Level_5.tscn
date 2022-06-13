@@ -37,24 +37,30 @@ margin_left = 4.06567
 margin_top = 6.31067
 margin_right = 4.06543
 margin_bottom = 6.31091
-color = Color( 0.141176, 0.415686, 0.443137, 1 )
+color = Color( 0.0431373, 0.235294, 0.309804, 1 )
 __meta__ = {
 "_edit_use_anchors_": true
 }
 
 [node name="WallTop" type="StaticBody2D" parent="."]
+collision_layer = 64
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallTop"]
 position = Vector2( 969.094, -9 )
 shape = SubResource( 1 )
 
 [node name="WallLeft" type="StaticBody2D" parent="."]
+collision_layer = 64
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallLeft"]
 position = Vector2( -6, 539.591 )
 shape = SubResource( 2 )
 
 [node name="WallRight" type="StaticBody2D" parent="."]
+collision_layer = 64
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallRight"]
 position = Vector2( 1926, 539.591 )
@@ -172,48 +178,30 @@ position = Vector2( 1038.46, 399 )
 
 [node name="BrickWallGray5" parent="BricksWall" instance=ExtResource( 5 )]
 position = Vector2( 540, 670 )
-collision_layer = 8
-collision_mask = 2
 
 [node name="BrickWallGray7" parent="BricksWall" instance=ExtResource( 5 )]
 position = Vector2( 884.075, 450 )
-collision_layer = 8
-collision_mask = 2
 
 [node name="BrickWallGray8" parent="BricksWall" instance=ExtResource( 5 )]
 position = Vector2( 1038.17, 450 )
-collision_layer = 8
-collision_mask = 2
 
 [node name="BrickWallGray9" parent="BricksWall" instance=ExtResource( 5 )]
 position = Vector2( 1380, 670 )
-collision_layer = 8
-collision_mask = 2
 
 [node name="BrickWallGray6" parent="BricksWall" instance=ExtResource( 5 )]
 position = Vector2( 232.87, 670 )
-collision_layer = 8
-collision_mask = 2
 
 [node name="BrickWallGray2" parent="BricksWall" instance=ExtResource( 5 )]
 position = Vector2( 1687.58, 670 )
-collision_layer = 8
-collision_mask = 2
 
 [node name="Brick2WallGrey" parent="BricksWall" instance=ExtResource( 3 )]
 position = Vector2( 385.195, 670 )
-collision_layer = 8
-collision_mask = 2
 
 [node name="Brick2WallGrey3" parent="BricksWall" instance=ExtResource( 3 )]
 position = Vector2( 960, 478.482 )
-collision_layer = 8
-collision_mask = 2
 
 [node name="Brick2WallGrey2" parent="BricksWall" instance=ExtResource( 3 )]
 position = Vector2( 1531.87, 670 )
-collision_layer = 8
-collision_mask = 2
 
 [node name="Heart" parent="." instance=ExtResource( 13 )]
 position = Vector2( 811.919, 245.812 )
@@ -232,11 +220,19 @@ script = ExtResource( 16 )
 [node name="StartPositions" type="Node" parent="."]
 
 [node name="CloudStart1" type="Position2D" parent="StartPositions"]
-position = Vector2( 351.121, -73.6222 )
+position = Vector2( 715, -113.175 )
+
+[node name="CloudStart2" type="Position2D" parent="StartPositions"]
+position = Vector2( 1205, -354.862 )
 
 [node name="CloudTimer" type="Node" parent="."]
 
 [node name="Timer1" type="Timer" parent="CloudTimer"]
+autostart = true
+
+[node name="Timer2" type="Timer" parent="CloudTimer"]
+autostart = true
 
 [connection signal="body_entered" from="Bottom" to="." method="_on_Bottom_body_entered"]
 [connection signal="timeout" from="CloudTimer/Timer1" to="." method="_on_Timer1_timeout"]
+[connection signal="timeout" from="CloudTimer/Timer2" to="." method="_on_Timer2_timeout"]

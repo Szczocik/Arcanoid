@@ -26,6 +26,8 @@ window/size/height=1080
 2d_physics/layer_3="Brick"
 2d_physics/layer_4="Brick_wall"
 2d_physics/layer_5="Heart"
+2d_physics/layer_6="Cloud"
+2d_physics/layer_7="Wall"
 
 [physics]
 
