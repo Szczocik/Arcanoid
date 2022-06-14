@@ -35,6 +35,22 @@ func brick_up():
 	if PlayerScore == 25:
 		change_scene()
 	
+
+func portal_up():
+	get_tree().call_group("BallGroup", "stop_ball")
+	$Ball.visible = false
+	$Ball.position = Vector2(960, 100)
+	$Ball.visible = true
+	get_tree().call_group("BallGroup", "restart_ball")
+	
+	
+func portal_down():
+	get_tree().call_group("BallGroup", "stop_ball")
+	$Ball.visible = false
+	$Ball.position = Vector2(960, 540)
+	$Ball.visible = true
+	get_tree().call_group("BallGroup", "restart_ball")
+
 	
 func cloud_spawn(start_pos):
 	var cloud = CLOUD.instance()
