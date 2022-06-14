@@ -174,38 +174,24 @@ position = Vector2( 1042.26, 192.416 )
 
 [node name="BrickWallGray" parent="BricksWall" instance=ExtResource( 5 )]
 position = Vector2( 960, 500 )
-collision_layer = 8
-collision_mask = 2
 
 [node name="BrickWallGray5" parent="BricksWall" instance=ExtResource( 5 )]
 position = Vector2( 654.428, 500 )
-collision_layer = 8
-collision_mask = 2
 
 [node name="BrickWallGray6" parent="BricksWall" instance=ExtResource( 5 )]
 position = Vector2( 500.018, 500 )
-collision_layer = 8
-collision_mask = 2
 
 [node name="BrickWallGray2" parent="BricksWall" instance=ExtResource( 5 )]
 position = Vector2( 1114.66, 500 )
-collision_layer = 8
-collision_mask = 2
 
 [node name="BrickWallGray4" parent="BricksWall" instance=ExtResource( 5 )]
 position = Vector2( 1269.44, 500 )
-collision_layer = 8
-collision_mask = 2
 
 [node name="Brick2WallGrey" parent="BricksWall" instance=ExtResource( 3 )]
 position = Vector2( 1424.03, 500 )
-collision_layer = 8
-collision_mask = 2
 
 [node name="Brick2WallGrey2" parent="BricksWall" instance=ExtResource( 3 )]
 position = Vector2( 806.266, 500 )
-collision_layer = 8
-collision_mask = 2
 
 [node name="Heart" parent="." instance=ExtResource( 13 )]
 position = Vector2( 890.819, 142.932 )
