@@ -46,6 +46,7 @@ func cloud_spawn(start_pos):
 	get_node(timer_node_name).wait_time = rand_range(10,10)
 	update_GUI()
 	
+
 	
 	
 func change_scene():
