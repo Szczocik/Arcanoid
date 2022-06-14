@@ -103,10 +103,10 @@ position = Vector2( 1610.65, 108.621 )
 position = Vector2( 1763.9, 108.621 )
 
 [node name="BrickRed8" parent="Bricks/Red" instance=ExtResource( 6 )]
-position = Vector2( 154.454, 113.053 )
+position = Vector2( 152.956, 112.303 )
 
 [node name="BrickRed9" parent="Bricks/Red" instance=ExtResource( 6 )]
-position = Vector2( 308.285, 113.053 )
+position = Vector2( 306.787, 112.303 )
 
 [node name="Orange" type="Node2D" parent="Bricks"]
 
@@ -129,10 +129,10 @@ position = Vector2( 1610.65, 159.621 )
 position = Vector2( 1763.9, 159.621 )
 
 [node name="BrickOrange9" parent="Bricks/Orange" instance=ExtResource( 9 )]
-position = Vector2( 308.285, 164.053 )
+position = Vector2( 306.787, 163.303 )
 
 [node name="BrickOrange10" parent="Bricks/Orange" instance=ExtResource( 9 )]
-position = Vector2( 154.454, 164.053 )
+position = Vector2( 152.956, 163.303 )
 
 [node name="Blue" type="Node2D" parent="Bricks"]
 
@@ -168,13 +168,13 @@ position = Vector2( 1610.65, 261.621 )
 position = Vector2( 1763.9, 261.621 )
 
 [node name="BrickViolet14" parent="Bricks/Violet" instance=ExtResource( 12 )]
-position = Vector2( 232.152, 60.6955 )
+position = Vector2( 230.654, 59.9464 )
 
 [node name="BrickViolet15" parent="Bricks/Violet" instance=ExtResource( 12 )]
-position = Vector2( 154.454, 266.053 )
+position = Vector2( 152.956, 265.303 )
 
 [node name="BrickViolet16" parent="Bricks/Violet" instance=ExtResource( 12 )]
-position = Vector2( 308.285, 266.053 )
+position = Vector2( 306.787, 265.303 )
 
 [node name="GUI" parent="." instance=ExtResource( 8 )]
 
@@ -208,13 +208,13 @@ position = Vector2( 1840.42, 211.621 )
 position = Vector2( 1684.71, 211.62 )
 
 [node name="BrickWallGray11" parent="BricksWall" instance=ExtResource( 5 )]
-position = Vector2( 386.957, 216.053 )
+position = Vector2( 385.459, 215.303 )
 
 [node name="BrickWallGray12" parent="BricksWall" instance=ExtResource( 5 )]
-position = Vector2( 79.8268, 216.053 )
+position = Vector2( 78.3285, 215.303 )
 
 [node name="Brick2WallGrey5" parent="BricksWall" instance=ExtResource( 3 )]
-position = Vector2( 232.152, 216.053 )
+position = Vector2( 230.654, 215.303 )
 
 [node name="Heart" parent="." instance=ExtResource( 13 )]
 position = Vector2( 425.625, 589.37 )
@@ -228,7 +228,7 @@ position = Vector2( 1494.63, 157.909 )
 scale = Vector2( 1.14166, 1 )
 
 [node name="Heart5" parent="." instance=ExtResource( 13 )]
-position = Vector2( 427.512, 162.739 )
+position = Vector2( 426.014, 161.99 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 10 )
