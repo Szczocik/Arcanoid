@@ -1,10 +1,9 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Ball/Ball.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Walls/BrickWallGrey2.tscn" type="PackedScene" id=3]
 [ext_resource path="res://NPCs/Cloud2.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Walls/BrickWallGray.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Bricks/BrickRed.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Levels/GameState.gd" type="Script" id=7]
 [ext_resource path="res://GUI/GUI.tscn" type="PackedScene" id=8]
@@ -27,10 +26,10 @@ extents = Vector2( 973.444, 10 )
 script = ExtResource( 7 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
-anchor_left = 0.000417874
-anchor_top = -0.0150087
-anchor_right = 1.00042
-anchor_bottom = 0.984991
+anchor_left = -0.0118217
+anchor_top = -0.0170873
+anchor_right = 0.98818
+anchor_bottom = 0.982912
 margin_left = 4.06567
 margin_top = 6.31067
 margin_right = 4.06543
@@ -85,48 +84,48 @@ collision_mask = 2
 [node name="Red" type="Node2D" parent="Bricks"]
 
 [node name="BrickRed2" parent="Bricks/Red" instance=ExtResource( 6 )]
-position = Vector2( 385.823, 73.984 )
+position = Vector2( 385.823, 80 )
 
 [node name="BrickRed3" parent="Bricks/Red" instance=ExtResource( 6 )]
-position = Vector2( 539.445, 73.984 )
+position = Vector2( 539.445, 80 )
 
 [node name="BrickRed4" parent="Bricks/Red" instance=ExtResource( 6 )]
-position = Vector2( 1381.08, 78 )
+position = Vector2( 1381.08, 80 )
 
 [node name="BrickRed5" parent="Bricks/Red" instance=ExtResource( 6 )]
-position = Vector2( 1535.67, 78 )
+position = Vector2( 1535.67, 80 )
 
 [node name="BrickRed6" parent="Bricks/Red" instance=ExtResource( 6 )]
-position = Vector2( 1685.88, 78 )
+position = Vector2( 1685.88, 80 )
 
 [node name="BrickRed7" parent="Bricks/Red" instance=ExtResource( 6 )]
-position = Vector2( 1840.01, 78 )
+position = Vector2( 1840.01, 80 )
 
 [node name="BrickRed8" parent="Bricks/Red" instance=ExtResource( 6 )]
-position = Vector2( 80.5428, 73.984 )
+position = Vector2( 78.421, 80 )
 
 [node name="BrickRed9" parent="Bricks/Red" instance=ExtResource( 6 )]
-position = Vector2( 233.665, 73.984 )
+position = Vector2( 233.665, 80 )
 
 [node name="Orange" type="Node2D" parent="Bricks"]
 
 [node name="BrickOrange2" parent="Bricks/Orange" instance=ExtResource( 9 )]
-position = Vector2( 383.823, 123.984 )
+position = Vector2( 383.823, 130 )
 
 [node name="BrickOrange7" parent="Bricks/Orange" instance=ExtResource( 9 )]
-position = Vector2( 231.665, 123.984 )
+position = Vector2( 231.665, 130 )
 
 [node name="BrickOrange5" parent="Bricks/Orange" instance=ExtResource( 9 )]
-position = Vector2( 1536.01, 129.829 )
+position = Vector2( 1536.01, 130 )
 
 [node name="BrickOrange6" parent="Bricks/Orange" instance=ExtResource( 9 )]
-position = Vector2( 1686.88, 129.829 )
+position = Vector2( 1686.88, 130 )
 
 [node name="BrickOrange8" parent="Bricks/Orange" instance=ExtResource( 9 )]
-position = Vector2( 1840.35, 129.829 )
+position = Vector2( 1840.35, 130 )
 
 [node name="BrickOrange10" parent="Bricks/Orange" instance=ExtResource( 9 )]
-position = Vector2( 78.5428, 123.984 )
+position = Vector2( 78.543, 130 )
 
 [node name="Blue" type="Node2D" parent="Bricks"]
 
@@ -135,50 +134,44 @@ position = Vector2( 78.5428, 123.984 )
 [node name="Violet" type="Node2D" parent="Bricks"]
 
 [node name="BrickViolet5" parent="Bricks/Violet" instance=ExtResource( 12 )]
-position = Vector2( 1535.67, 25 )
+position = Vector2( 1535.67, 28 )
 
 [node name="BrickViolet6" parent="Bricks/Violet" instance=ExtResource( 12 )]
-position = Vector2( 1685.88, 25 )
+position = Vector2( 1685.88, 28 )
 
 [node name="BrickViolet9" parent="Bricks/Violet" instance=ExtResource( 12 )]
-position = Vector2( 233.665, 21.984 )
+position = Vector2( 232.665, 28 )
 
 [node name="BrickViolet10" parent="Bricks/Violet" instance=ExtResource( 12 )]
-position = Vector2( 539.445, 21.317 )
+position = Vector2( 539.445, 28 )
 
 [node name="BrickViolet7" parent="Bricks/Violet" instance=ExtResource( 12 )]
-position = Vector2( 80.5428, 21.984 )
+position = Vector2( 78.043, 28 )
 
 [node name="BrickViolet8" parent="Bricks/Violet" instance=ExtResource( 12 )]
-position = Vector2( 385.823, 21.984 )
+position = Vector2( 385.823, 28 )
 
 [node name="BrickViolet11" parent="Bricks/Violet" instance=ExtResource( 12 )]
-position = Vector2( 1840.01, 25 )
+position = Vector2( 1840.51, 28 )
 
 [node name="BrickViolet12" parent="Bricks/Violet" instance=ExtResource( 12 )]
-position = Vector2( 1226.65, 25 )
+position = Vector2( 1226.65, 28 )
 
 [node name="BrickViolet15" parent="Bricks/Violet" instance=ExtResource( 12 )]
-position = Vector2( 1381.08, 25 )
+position = Vector2( 1381.08, 28 )
 
 [node name="BrickViolet16" parent="Bricks/Violet" instance=ExtResource( 12 )]
-position = Vector2( 693.21, 21.984 )
+position = Vector2( 693.21, 28 )
 
 [node name="GUI" parent="." instance=ExtResource( 8 )]
 
 [node name="BricksWall" type="Node2D" parent="."]
 
-[node name="BrickWallGray3" parent="BricksWall" instance=ExtResource( 5 )]
-position = Vector2( 1840.68, 181.328 )
-
 [node name="Brick2WallGrey4" parent="BricksWall" instance=ExtResource( 3 )]
-position = Vector2( 1685.88, 180.994 )
-
-[node name="BrickWallGray12" parent="BricksWall" instance=ExtResource( 5 )]
-position = Vector2( 78.5428, 175.666 )
+position = Vector2( 1840.6, 180 )
 
 [node name="Brick2WallGrey5" parent="BricksWall" instance=ExtResource( 3 )]
-position = Vector2( 231.665, 175.666 )
+position = Vector2( 77.781, 180 )
 
 [node name="Heart" parent="." instance=ExtResource( 13 )]
 position = Vector2( 54.0952, 244.426 )
@@ -192,9 +185,11 @@ stream = ExtResource( 10 )
 script = ExtResource( 16 )
 
 [node name="Cloud2" parent="." instance=ExtResource( 4 )]
+modulate = Color( 0.439216, 0.411765, 0.411765, 1 )
 position = Vector2( 406, 450 )
 
 [node name="Cloud3" parent="." instance=ExtResource( 4 )]
+modulate = Color( 0.439216, 0.411765, 0.411765, 1 )
 position = Vector2( 1524, 460 )
 
 [connection signal="body_entered" from="Bottom" to="." method="_on_Bottom_body_entered"]
