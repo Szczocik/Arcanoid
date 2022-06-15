@@ -27,15 +27,15 @@ extents = Vector2( 973.444, 10 )
 script = ExtResource( 7 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
-anchor_left = -0.00422226
-anchor_top = -0.00840943
-anchor_right = 0.995777
-anchor_bottom = 0.99159
+anchor_left = 0.000417874
+anchor_top = -0.0150087
+anchor_right = 1.00042
+anchor_bottom = 0.984991
 margin_left = 4.06567
 margin_top = 6.31067
 margin_right = 4.06543
 margin_bottom = 6.31091
-color = Color( 0.27451, 0.309804, 0.176471, 1 )
+color = Color( 0.509804, 0.0941176, 0.152941, 1 )
 __meta__ = {
 "_edit_use_anchors_": true
 }
