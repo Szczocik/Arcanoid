@@ -27,6 +27,8 @@ func ball_up():
 func ball_down():
 	Ball -= 1
 	update_GUI()
+	if Ball < 0:
+		game_over()
 	
 
 func brick_up():

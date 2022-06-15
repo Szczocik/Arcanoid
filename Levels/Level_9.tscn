@@ -1,0 +1,200 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Ball/Ball.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Walls/BrickWallGrey2.tscn" type="PackedScene" id=3]
+[ext_resource path="res://NPCs/Cloud2.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Walls/BrickWallGray.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Bricks/BrickRed.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Levels/GameState.gd" type="Script" id=7]
+[ext_resource path="res://GUI/GUI.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Bricks/BrickOrange.tscn" type="PackedScene" id=9]
+[ext_resource path="res://SFX/Cyber_Space_Hunters.ogg" type="AudioStream" id=10]
+[ext_resource path="res://Bricks/BrickViolet.tscn" type="PackedScene" id=12]
+[ext_resource path="res://NPCs/Heart.tscn" type="PackedScene" id=13]
+[ext_resource path="res://SFX/BGM.gd" type="Script" id=16]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 1152.4, 10 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 6.44901, 564.391 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 973.444, 10 )
+
+[node name="Level_9" type="Node"]
+script = ExtResource( 7 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_left = 0.000417874
+anchor_top = -0.0150087
+anchor_right = 1.00042
+anchor_bottom = 0.984991
+margin_left = 4.06567
+margin_top = 6.31067
+margin_right = 4.06543
+margin_bottom = 6.31091
+color = Color( 0.509804, 0.0941176, 0.152941, 1 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="WallTop" type="StaticBody2D" parent="."]
+collision_layer = 64
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallTop"]
+position = Vector2( 816.463, -10.2544 )
+shape = SubResource( 1 )
+
+[node name="WallLeft" type="StaticBody2D" parent="."]
+collision_layer = 64
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallLeft"]
+position = Vector2( -6, 539.591 )
+shape = SubResource( 2 )
+
+[node name="WallRight" type="StaticBody2D" parent="."]
+collision_layer = 64
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallRight"]
+position = Vector2( 1926, 539.591 )
+shape = SubResource( 2 )
+
+[node name="Bottom" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bottom"]
+position = Vector2( 973.942, 1089 )
+shape = SubResource( 3 )
+
+[node name="Ball" parent="." instance=ExtResource( 2 )]
+position = Vector2( 960, 540 )
+collision_layer = 2
+collision_mask = 13
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+collision_mask = 2
+
+[node name="Bricks" type="Node2D" parent="."]
+
+[node name="Green" type="Node2D" parent="Bricks"]
+
+[node name="Red" type="Node2D" parent="Bricks"]
+
+[node name="BrickRed2" parent="Bricks/Red" instance=ExtResource( 6 )]
+position = Vector2( 385.823, 73.984 )
+
+[node name="BrickRed3" parent="Bricks/Red" instance=ExtResource( 6 )]
+position = Vector2( 539.445, 73.984 )
+
+[node name="BrickRed4" parent="Bricks/Red" instance=ExtResource( 6 )]
+position = Vector2( 1381.08, 78 )
+
+[node name="BrickRed5" parent="Bricks/Red" instance=ExtResource( 6 )]
+position = Vector2( 1535.67, 78 )
+
+[node name="BrickRed6" parent="Bricks/Red" instance=ExtResource( 6 )]
+position = Vector2( 1685.88, 78 )
+
+[node name="BrickRed7" parent="Bricks/Red" instance=ExtResource( 6 )]
+position = Vector2( 1840.01, 78 )
+
+[node name="BrickRed8" parent="Bricks/Red" instance=ExtResource( 6 )]
+position = Vector2( 80.5428, 73.984 )
+
+[node name="BrickRed9" parent="Bricks/Red" instance=ExtResource( 6 )]
+position = Vector2( 233.665, 73.984 )
+
+[node name="Orange" type="Node2D" parent="Bricks"]
+
+[node name="BrickOrange2" parent="Bricks/Orange" instance=ExtResource( 9 )]
+position = Vector2( 383.823, 123.984 )
+
+[node name="BrickOrange7" parent="Bricks/Orange" instance=ExtResource( 9 )]
+position = Vector2( 231.665, 123.984 )
+
+[node name="BrickOrange5" parent="Bricks/Orange" instance=ExtResource( 9 )]
+position = Vector2( 1536.01, 129.829 )
+
+[node name="BrickOrange6" parent="Bricks/Orange" instance=ExtResource( 9 )]
+position = Vector2( 1686.88, 129.829 )
+
+[node name="BrickOrange8" parent="Bricks/Orange" instance=ExtResource( 9 )]
+position = Vector2( 1840.35, 129.829 )
+
+[node name="BrickOrange10" parent="Bricks/Orange" instance=ExtResource( 9 )]
+position = Vector2( 78.5428, 123.984 )
+
+[node name="Blue" type="Node2D" parent="Bricks"]
+
+[node name="Yellow" type="Node2D" parent="Bricks"]
+
+[node name="Violet" type="Node2D" parent="Bricks"]
+
+[node name="BrickViolet5" parent="Bricks/Violet" instance=ExtResource( 12 )]
+position = Vector2( 1535.67, 25 )
+
+[node name="BrickViolet6" parent="Bricks/Violet" instance=ExtResource( 12 )]
+position = Vector2( 1685.88, 25 )
+
+[node name="BrickViolet9" parent="Bricks/Violet" instance=ExtResource( 12 )]
+position = Vector2( 233.665, 21.984 )
+
+[node name="BrickViolet10" parent="Bricks/Violet" instance=ExtResource( 12 )]
+position = Vector2( 539.445, 21.317 )
+
+[node name="BrickViolet7" parent="Bricks/Violet" instance=ExtResource( 12 )]
+position = Vector2( 80.5428, 21.984 )
+
+[node name="BrickViolet8" parent="Bricks/Violet" instance=ExtResource( 12 )]
+position = Vector2( 385.823, 21.984 )
+
+[node name="BrickViolet11" parent="Bricks/Violet" instance=ExtResource( 12 )]
+position = Vector2( 1840.01, 25 )
+
+[node name="BrickViolet12" parent="Bricks/Violet" instance=ExtResource( 12 )]
+position = Vector2( 1226.65, 25 )
+
+[node name="BrickViolet15" parent="Bricks/Violet" instance=ExtResource( 12 )]
+position = Vector2( 1381.08, 25 )
+
+[node name="BrickViolet16" parent="Bricks/Violet" instance=ExtResource( 12 )]
+position = Vector2( 693.21, 21.984 )
+
+[node name="GUI" parent="." instance=ExtResource( 8 )]
+
+[node name="BricksWall" type="Node2D" parent="."]
+
+[node name="BrickWallGray3" parent="BricksWall" instance=ExtResource( 5 )]
+position = Vector2( 1840.68, 181.328 )
+
+[node name="Brick2WallGrey4" parent="BricksWall" instance=ExtResource( 3 )]
+position = Vector2( 1685.88, 180.994 )
+
+[node name="BrickWallGray12" parent="BricksWall" instance=ExtResource( 5 )]
+position = Vector2( 78.5428, 175.666 )
+
+[node name="Brick2WallGrey5" parent="BricksWall" instance=ExtResource( 3 )]
+position = Vector2( 231.665, 175.666 )
+
+[node name="Heart" parent="." instance=ExtResource( 13 )]
+position = Vector2( 54.0952, 244.426 )
+
+[node name="Heart4" parent="." instance=ExtResource( 13 )]
+position = Vector2( 1858.15, 260.095 )
+scale = Vector2( 1.14166, 1 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+script = ExtResource( 16 )
+
+[node name="Cloud2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 406, 450 )
+
+[node name="Cloud3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1524, 460 )
+
+[connection signal="body_entered" from="Bottom" to="." method="_on_Bottom_body_entered"]
