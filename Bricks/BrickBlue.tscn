@@ -8,7 +8,6 @@ extents = Vector2( 191.39, 63.4593 )
 [node name="BrickBlue" type="StaticBody2D" groups=[
 "bricks",
 ]]
-position = Vector2( 126, 74 )
 collision_layer = 4
 collision_mask = 2
 __meta__ = {

@@ -19,10 +19,15 @@ func _on_Bottom_body_entered(body):
 	if Ball < 0:
 		game_over()
 		
+func add_ball2():
+	$Ball2.position = Vector2(860, 200)
+	
+
 
 func ball_up():
 	Ball += 1
 	update_GUI()
+	
 	
 func ball_down():
 	Ball -= 1
@@ -63,8 +68,6 @@ func cloud_spawn(start_pos):
 	var timer_node_name = "CloudTimer/Timer" + str(start_pos)
 	get_node(timer_node_name).wait_time = rand_range(10,10)
 	update_GUI()
-	
-
 	
 	
 func change_scene():
