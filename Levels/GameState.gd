@@ -19,10 +19,6 @@ func _on_Bottom_body_entered(body):
 	if Ball < 0:
 		game_over()
 		
-func add_ball2():
-	$Ball2.position = Vector2(860, 200)
-	
-
 
 func ball_up():
 	Ball += 1
@@ -81,8 +77,6 @@ func update_GUI():
 func game_over():
 	get_tree().change_scene("res://Levels/Game_over.tscn")
 	
-	
-
 
 func _on_Timer1_timeout(): cloud_spawn(1)
 func _on_Timer2_timeout(): cloud_spawn(2)
