@@ -1,9 +1,10 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Ball/Ball.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Walls/BrickWallGrey2.tscn" type="PackedScene" id=3]
 [ext_resource path="res://NPCs/Cloud2.tscn" type="PackedScene" id=4]
+[ext_resource path="res://kirifont/KiriFont.ttf" type="DynamicFontData" id=5]
 [ext_resource path="res://Bricks/BrickRed.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Levels/GameState.gd" type="Script" id=7]
 [ext_resource path="res://GUI/GUI.tscn" type="PackedScene" id=8]
@@ -13,13 +14,17 @@
 [ext_resource path="res://NPCs/Heart.tscn" type="PackedScene" id=13]
 [ext_resource path="res://SFX/BGM.gd" type="Script" id=16]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 1152.4, 10 )
+[sub_resource type="DynamicFont" id=1]
+size = 45
+font_data = ExtResource( 5 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 6.44901, 564.391 )
+extents = Vector2( 1152.4, 10 )
 
 [sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 6.44901, 564.391 )
+
+[sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 973.444, 10 )
 
 [node name="Level_9" type="Node"]
@@ -39,13 +44,25 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
+[node name="CountdownLabel" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -150.0
+custom_fonts/font = SubResource( 1 )
+text = "Countdown"
+align = 1
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="WallTop" type="StaticBody2D" parent="."]
 collision_layer = 64
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallTop"]
 position = Vector2( 816.463, -10.2544 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="WallLeft" type="StaticBody2D" parent="."]
 collision_layer = 64
@@ -53,7 +70,7 @@ collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallLeft"]
 position = Vector2( -6, 539.591 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 
 [node name="WallRight" type="StaticBody2D" parent="."]
 collision_layer = 64
@@ -61,13 +78,13 @@ collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallRight"]
 position = Vector2( 1926, 539.591 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 
 [node name="Bottom" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bottom"]
 position = Vector2( 973.942, 1089 )
-shape = SubResource( 3 )
+shape = SubResource( 4 )
 
 [node name="Ball" parent="." instance=ExtResource( 2 )]
 position = Vector2( 960, 540 )
@@ -163,8 +180,6 @@ position = Vector2( 1381.08, 28 )
 [node name="BrickViolet16" parent="Bricks/Violet" instance=ExtResource( 12 )]
 position = Vector2( 693.21, 28 )
 
-[node name="GUI" parent="." instance=ExtResource( 8 )]
-
 [node name="BricksWall" type="Node2D" parent="."]
 
 [node name="Brick2WallGrey4" parent="BricksWall" instance=ExtResource( 3 )]
@@ -180,10 +195,6 @@ position = Vector2( 54.0952, 244.426 )
 position = Vector2( 1858.15, 260.095 )
 scale = Vector2( 1.14166, 1 )
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 10 )
-script = ExtResource( 16 )
-
 [node name="Cloud2" parent="." instance=ExtResource( 4 )]
 modulate = Color( 0.439216, 0.411765, 0.411765, 1 )
 position = Vector2( 406, 450 )
@@ -192,4 +203,15 @@ position = Vector2( 406, 450 )
 modulate = Color( 0.439216, 0.411765, 0.411765, 1 )
 position = Vector2( 1524, 460 )
 
+[node name="CountdownTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="GUI" parent="." instance=ExtResource( 8 )]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+script = ExtResource( 16 )
+
 [connection signal="body_entered" from="Bottom" to="." method="_on_Bottom_body_entered"]
+[connection signal="timeout" from="CountdownTimer" to="." method="_on_CountdownTimer_timeout"]
