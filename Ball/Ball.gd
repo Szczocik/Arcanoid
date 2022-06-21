@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-var speed = 500
+var speed = 350
 var velocity = Vector2.ZERO
 
 
@@ -33,6 +33,6 @@ func speed_ball():
 	
 	
 func restart_ball():
-	speed = 400
+	speed = 350
 	velocity.x = [-0.8,0.8][randi() % 2]
 	velocity.y = [-1,1][randi() % 2]
