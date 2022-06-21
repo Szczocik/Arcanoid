@@ -40,6 +40,8 @@ func brick_up():
 	update_GUI()
 	if PlayerScore == 25:
 		change_scene()
+	if PlayerScore == 30:
+		game_over()
 	
 
 func portal_up():
