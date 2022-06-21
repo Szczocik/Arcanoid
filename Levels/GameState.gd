@@ -3,7 +3,7 @@ extends Node
 const CLOUD = preload("res://NPCs/Cloud.tscn")
 
 var Ball = 3
-var PlayerScore = 0
+var PlayerScore = 20
 
 
 
@@ -13,11 +13,14 @@ func _ready():
 
 
 func _on_Bottom_body_entered(body):
-	$Ball.position = Vector2(860, 540)
+	$Ball.position = Vector2(960, 600)
+	get_tree().call_group("BallGroup","stop_ball")
 	Ball -= 1
 	update_GUI()
 	if Ball < 0:
 		game_over()
+	$CountdownTimer.start()
+	$CountdownLabel.visible = true
 		
 
 func ball_up():
@@ -73,10 +76,21 @@ func change_scene():
 func update_GUI():
 	get_tree().call_group("GUI", "update_GUI", PlayerScore, Ball)
 		
-		
+
+func _process(delta):
+	$CountdownLabel.text = str(int($CountdownTimer.time_left) +1)
+
+	
+func _on_CountdownTimer_timeout():
+	get_tree().call_group("BallGroup","restart_ball")
+	$CountdownLabel.visible = false	
+
+	
 func game_over():
 	get_tree().change_scene("res://Levels/Game_over.tscn")
 	
 
 func _on_Timer1_timeout(): cloud_spawn(1)
 func _on_Timer2_timeout(): cloud_spawn(2)
+
+

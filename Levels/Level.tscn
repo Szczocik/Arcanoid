@@ -13,7 +13,7 @@
 [ext_resource path="res://kirifont/KiriFont.ttf" type="DynamicFontData" id=11]
 
 [sub_resource type="DynamicFont" id=4]
-size = 43
+size = 45
 font_data = ExtResource( 11 )
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -228,6 +228,10 @@ position = Vector2( 1820.99, 294.505 )
 [node name="BrickBlue17" parent="Bricks" instance=ExtResource( 3 )]
 position = Vector2( 1820.99, 135.505 )
 
+[node name="CountdownTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
 [node name="GUI" parent="." instance=ExtResource( 8 )]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
@@ -236,3 +240,4 @@ volume_db = -6.0
 script = ExtResource( 9 )
 
 [connection signal="body_entered" from="Bottom" to="." method="_on_Bottom_body_entered"]
+[connection signal="timeout" from="CountdownTimer" to="." method="_on_CountdownTimer_timeout"]
