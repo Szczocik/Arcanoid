@@ -73,6 +73,7 @@ func cloud_spawn(start_pos):
 	
 func change_scene():
 	get_tree().change_scene("res://Levels/Level_" + str(int(get_tree().current_scene.name) + 1) + ".tscn")
+	
 
 
 func update_GUI():

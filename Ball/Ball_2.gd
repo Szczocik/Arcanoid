@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-var speed = 350
+var speed = 450
 var velocity = Vector2.ZERO
 
 
@@ -26,10 +26,11 @@ func _physics_process(delta):
 
 func stop_ball():
 	speed = 0
+	
 
 	
 
 func restart_ball():
-	speed = 350
+	speed = 450
 	velocity.x = [-0.8,0.8][randi() % 2]
 	velocity.y = [-1,1][randi() % 2]
