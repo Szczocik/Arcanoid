@@ -14,7 +14,7 @@
 [ext_resource path="res://Bricks/BrickViolet.tscn" type="PackedScene" id=12]
 [ext_resource path="res://NPCs/Heart.tscn" type="PackedScene" id=13]
 [ext_resource path="res://kirifont/KiriFont.ttf" type="DynamicFontData" id=14]
-[ext_resource path="res://SFX/Summer_Park.ogg" type="AudioStream" id=15]
+[ext_resource path="res://SFX/StealthintheWoods.ogg" type="AudioStream" id=15]
 [ext_resource path="res://SFX/BGM.gd" type="Script" id=16]
 [ext_resource path="res://Ball/Ball_5.gd" type="Script" id=17]
 
@@ -91,7 +91,7 @@ position = Vector2( 973.942, 1089 )
 shape = SubResource( 4 )
 
 [node name="Ball" parent="." instance=ExtResource( 2 )]
-position = Vector2( 960, 540 )
+position = Vector2( 960, 600 )
 collision_layer = 2
 collision_mask = 13
 script = ExtResource( 17 )
