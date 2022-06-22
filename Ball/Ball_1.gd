@@ -27,9 +27,7 @@ func _physics_process(delta):
 func stop_ball():
 	speed = 0
 	
-
 	
-
 func restart_ball():
 	speed = 400
 	velocity.x = [-0.8,0.8][randi() % 2]
